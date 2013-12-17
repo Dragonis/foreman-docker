@@ -46,15 +46,15 @@ httpd daemon (through passenger).
 
 TBD
 
-Building a setup
-----------------
+Building images
+---------------
 
 First of all we need to build "base" image that contains all necessary
 requirements for setup. All versions are based on this image, thus much
 smaller.
 
     pushd fedora-foreman-stable-git
-    docker build -t lzap/fedora-foreman-git-base:f19 .
+    docker build -t YOURNAME/fedora-foreman-git-base:f19 .
     popd
 
 Now we want to build Foreman on top of that image. Before running that, check
@@ -63,8 +63,8 @@ tag.
 
     pushd fedora-foreman-git-stable
     vim Dockerfile
-    docker build -t lzap/fedora-foreman-git-stable:1.3.1 .
-    docker push lzap/fedora-foreman-git-stable
+    docker build -t YOURNAME/fedora-foreman-git-stable:1.3.1 .
+    docker push YOURNAME/fedora-foreman-git-stable
     popd
 
 Getting shell
